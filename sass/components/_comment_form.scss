@@ -1,0 +1,51 @@
+form {
+    .comment-form {
+        width: 100%;
+        margin-top: 2rem;
+        padding: 1rem;
+    
+        @include flex($align: flex-start);
+    
+        &-avatar{
+            width: 20%;
+    
+            img {
+                border-radius: 50%;
+            }
+        }
+    
+        &-form {
+            width: 80%;
+            
+
+            p {
+                color: $text-color;
+
+                span {
+                    color: $primary-color;
+                }
+            }
+    
+            .comment-form-body {
+                .comment-form-item {
+    
+                    width: 100%;
+    
+                    textarea {
+                        width: 100%;
+                        resize: none;
+                        margin-bottom: 1rem;
+                        border: 1px solid #fefefe38;
+                        height: 3rem;
+                        padding: .5rem;
+                        background-color: transparent;
+                        color: #fefefe;
+                        outline: none;
+                        overflow: auto;
+                        border-style: none;
+                      }
+                }
+            }
+        }
+    }
+}
