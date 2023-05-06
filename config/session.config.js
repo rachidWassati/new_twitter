@@ -1,6 +1,7 @@
 const app =require('../app');
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
+const env = require(`../environment/${process.env.NODE_ENV}`)
 
 app.use(session({
     secret: "Voici ma cle secrete",
@@ -11,7 +12,7 @@ app.use(session({
         maxAge: 1000 * 60 * 60 * 24 * 14 // cookie de 14 jours
     },
     store: MongoStore.create({
-        mongoUrl: 'mongodb://rachid:toto@localhost:27017/new_twitter',
+        mongoUrl: env.dbUrl,
         ttl: 60 * 60 * 24 * 14
     })
 }))
