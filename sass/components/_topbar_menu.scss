@@ -23,6 +23,14 @@
     }
 
     &-user {
+        a {
+            margin-top: 2rem;
+
+            &:hover span {
+                color: $primary-color;
+            }
+        }
+        
         p {
             font-size: 1.5rem;
             margin-top: 2rem;

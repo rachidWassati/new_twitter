@@ -64,7 +64,8 @@ exports.showTweet = async (req, res, next) => {
     try {
         const tweetId = req.params.tweetId
         const tweet = await findTweetById(tweetId);
-        res.render('tweet/tweet-show', {tweet, comments: tweet.comments, isAuthenticated: req.isAuthenticated, currentUser: req.user})
+        const tweets = await findTweetsFromUsername(req.user._id);
+        res.render('tweet/tweet-show', {tweet, comments: tweet.comments, isAuthenticated: req.isAuthenticated, currentUser: req.user, tweets})
     } catch (error) {
         next(error);
     }

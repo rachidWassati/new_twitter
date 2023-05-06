@@ -15,3 +15,12 @@ if currentUser
         span Voir mon profil
       p= currentUser.fullName
       span @#{currentUser.username}
+
+      p Tweet#{tweets.length > 1 ? 's': ''}
+      span= tweets.length
+      
+      p Abonnement#{currentUser.followings.length > 1 ? 's': ''}
+      span= currentUser.followings.length
+
+      p Abonné#{currentUser.followers.length > 1 ? 's': ''}
+      span= currentUser.followers.length
