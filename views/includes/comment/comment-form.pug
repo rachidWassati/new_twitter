@@ -1,4 +1,4 @@
-form(action=`/comment/new/${tweet._id}` method="post")
+form(action=`/comment/new/${tweet._id}` method="post" class="new-comment")
     .comment-form 
         .comment-form-avatar
             img(src=currentUser.avatar width="30" height="30")
@@ -7,7 +7,7 @@ form(action=`/comment/new/${tweet._id}` method="post")
                 span @#{tweet.author.username}
             .comment-form-body 
                 .comment-form-item 
-                    textarea(name="message" placeholder="Tweeter votre réponse")
+                    textarea(name="message" placeholder="Tweeter votre réponse ici")
                 if errors 
                     ul
                     each error in errors 

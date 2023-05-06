@@ -1,24 +1,23 @@
 .tweets-user-list {
     width: 100%;
     margin-bottom: 5rem;
-    @include flex;
+    @include flex($direction: column);
 
     @include xl {
         width: 100%;
-
-        @include flex($direction: column);
     }
 }
 
 .user-content {
     border-top: 1px solid #fefefe;
-
+    
     @include flex;
-
+    
     @include xl {
         width: 100%;
     }
     .user-profile {
+        width: 100%;
         margin-top: 5rem;
         background-color: black;
 
