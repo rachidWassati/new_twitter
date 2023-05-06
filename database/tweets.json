@@ -1,0 +1,55 @@
+[
+
+    {
+        "_id": ObjectId("6156e28c4877a3e3b2ba2e00"),
+        "content": "Wow, je viens de découvrir mon nouveau café préféré ☕️❤️",
+        "author": "614c845299f3a3b3d8b67c05",
+        "comments": [],
+        "nbLikes": 0,
+        "nbShares": 0,
+        "retweeted": {
+            "status": false,
+            "initialTweet": null
+        },
+        "image": "https://example.com/image-1.jpg"
+    },
+    {
+        "_id": ObjectId("6156e28c4877a3e3b2ba2e01"),
+        "content": "Je suis en train de lire le nouveau roman de Haruki Murakami et je suis déjà accro 📖❤️",
+        "author": "614c845299f3a3b3d8b67c05",
+        "comments": [],
+        "nbLikes": 0,
+        "nbShares": 0,
+        "retweeted": {
+            "status": false,
+            "initialTweet": null
+        },
+        "image": "https://example.com/image-2.jpg"
+    },
+    {
+        "_id": ObjectId("6156e28c4877a3e3b2ba2e02"),
+        "content": "Je viens de regarder le dernier film de Marvel et c'était incroyable 🎥🤩",
+        "author": "614c845299f3a3b3d8b67c05",
+        "comments": [],
+        "nbLikes": 0,
+        "nbShares": 0,
+        "retweeted": {
+            "status": false,
+            "initialTweet": null
+        },
+        "image": "https://example.com/image-3.jpg"
+    },
+    {
+        "_id": ObjectId("6156e28c4877a3e3b2ba2e03"),
+        "content": "Je viens de réaliser une recette de cuisine incroyablement délicieuse que je voulais partager avec vous 🍲👌",
+        "author": "614c845299f3a3b3d8b67c05",
+        "comments": [],
+        "nbLikes": 0,
+        "nbShares": 0,
+        "retweeted": {
+            "status": false,
+            "initialTweet": null
+        },
+        "image": "https://example.com/image-4.jpg"
+    },
+]
