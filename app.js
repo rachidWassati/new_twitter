@@ -2,7 +2,8 @@ const express = require("express");
 const morgan = require("morgan");
 const path = require("path");
 const index = require("./routes");
-require('./database')
+const connectToDatabase = require('./database');
+connectToDatabase();
 
 const app = express();
 module.exports = app;
