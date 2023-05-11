@@ -1,5 +1,6 @@
 .tweet {
     width: 100%;
+    position: relative;
     @include flex;
 
     @include sm {
@@ -95,6 +96,7 @@
     
                     i {
                         color: #989898bf;
+                        margin-left: .5rem;
                         cursor: pointer;
     
                         &:hover {
@@ -168,6 +170,10 @@
         color: white;
     
         @include flex($direction: column);
+
+        @include xl {
+            width: 30%;
+        }
     
         i {
             margin-bottom: 2rem;

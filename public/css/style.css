@@ -14,9 +14,6 @@ ul {
   color: red;
   margin: .5rem 0; }
 
-.comment-list {
-  margin-bottom: 4rem; }
-
 * {
   margin: 0;
   padding: 0;
@@ -46,7 +43,6 @@ ul {
 .tweet-form {
   margin-top: 20%;
   width: 100%;
-  height: 15rem;
   padding: 1rem;
   box-shadow: rgba(235, 235, 235, 0.1) 0px 10px 15px -3px, rgba(236, 236, 236, 0.05) 0px 4px 6px -2px;
   display: flex;
@@ -57,19 +53,17 @@ ul {
   @media (min-width: 576px) {
     .tweet-form {
       width: 70%;
-      margin: 20% auto;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap; } }
+      margin: 20% auto 0; } }
+  @media (min-width: 768px) {
+    .tweet-form {
+      margin-top: 15%; } }
   @media (min-width: 992px) {
     .tweet-form {
       width: 50%; } }
   @media (min-width: 1200px) {
     .tweet-form {
-      margin: 5% auto;
-      width: 30%; } }
+      width: 40%;
+      margin-top: 10%; } }
   .tweet-form-avatar {
     width: 10%;
     align-self: flex-start; }
@@ -78,6 +72,8 @@ ul {
       border-radius: 50%; }
   .tweet-form-form {
     width: 90%; }
+    .tweet-form-form form {
+      width: 100%; }
     .tweet-form-form .form-title h4 {
       color: white;
       padding-bottom: 1rem; }
@@ -101,7 +97,8 @@ ul {
           color: #fefefe;
           outline: none;
           overflow: auto;
-          border-style: none; }
+          border-style: none;
+          font-size: 1.2rem; }
         .tweet-form-form .form-body .form-item p {
           color: #989898bf; }
         .tweet-form-form .form-body .form-item-image {
@@ -123,6 +120,7 @@ ul {
 
 .tweet {
   width: 100%;
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -144,7 +142,7 @@ ul {
       width: 50%; } }
   @media (min-width: 1200px) {
     .tweet {
-      width: 30%; } }
+      width: 40%; } }
   .tweet .share-info {
     color: white;
     margin-left: 1rem;
@@ -176,6 +174,7 @@ ul {
       width: 85%; }
       .tweet .tweet-card-data-author {
         width: 100%;
+        font-size: 1.2rem;
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
@@ -184,7 +183,8 @@ ul {
         .tweet .tweet-card-data-author p {
           color: white !important;
           font-weight: 400;
-          margin-right: .5rem; }
+          margin-right: .5rem;
+          font-size: 1.2rem; }
           .tweet .tweet-card-data-author p:hover {
             cursor: pointer;
             color: #00acee !important; }
@@ -204,13 +204,15 @@ ul {
           flex-wrap: wrap; }
           .tweet .tweet-card-data-author-actions i {
             color: #989898bf;
+            margin-left: .5rem;
             cursor: pointer; }
             .tweet .tweet-card-data-author-actions i:hover {
               color: #00acee; }
       .tweet .tweet-card-data-body {
         padding: .5rem; }
         .tweet .tweet-card-data-body p {
-          color: white; }
+          color: white;
+          font-size: 1.2rem; }
       .tweet .tweet-card-data-image {
         margin: .5rem auto;
         width: 100%;
@@ -258,6 +260,9 @@ ul {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap; }
+    @media (min-width: 1200px) {
+      .tweet .tweet-options {
+        width: 30%; } }
     .tweet .tweet-options i {
       margin-bottom: 2rem;
       font-size: 1.2rem;
@@ -290,6 +295,10 @@ ul {
     border-radius: 50%;
     border: 1px solid #00acee;
     cursor: pointer; }
+  .topbar-menu-user a {
+    margin-top: 2rem; }
+    .topbar-menu-user a:hover span {
+      color: #00acee; }
   .topbar-menu-user p {
     font-size: 1.5rem;
     margin-top: 2rem; }
@@ -322,33 +331,50 @@ ul {
         margin-left: 1rem;
         font-weight: 400; }
 
-form .comment-form {
+@media (min-width: 576px) {
+  .new-comment {
+    width: 75%;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    border: 1px solid #989898bf; } }
+
+@media (min-width: 992px) {
+  .new-comment {
+    width: 50%; } }
+
+@media (min-width: 1200px) {
+  .new-comment {
+    width: 40%; } }
+
+.new-comment .comment-form {
   width: 100%;
-  margin-top: 2rem;
   padding: 1rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap; }
-  form .comment-form-avatar {
+  @media (min-width: 1200px) {
+    .new-comment .comment-form {
+      width: 100%; } }
+  .new-comment .comment-form-avatar {
     width: 20%; }
-    form .comment-form-avatar img {
+    .new-comment .comment-form-avatar img {
       border-radius: 50%; }
-  form .comment-form-form {
+  .new-comment .comment-form-form {
     width: 80%; }
-    form .comment-form-form p {
+    .new-comment .comment-form-form p {
       color: #989898bf; }
-      form .comment-form-form p span {
+      .new-comment .comment-form-form p span {
         color: #00acee; }
-    form .comment-form-form .comment-form-body .comment-form-item {
+    .new-comment .comment-form-form .comment-form-body .comment-form-item {
       width: 100%; }
-      form .comment-form-form .comment-form-body .comment-form-item textarea {
+      .new-comment .comment-form-form .comment-form-body .comment-form-item textarea {
         width: 100%;
         resize: none;
         margin-bottom: 1rem;
         border: 1px solid #fefefe38;
-        height: 3rem;
+        height: 5rem;
         padding: .5rem;
         background-color: transparent;
         color: #fefefe;
@@ -422,10 +448,12 @@ form .comment-form {
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
+      margin-top: 7rem;
       width: 100%; } }
   @media (min-width: 992px) {
     .tweets-container {
       width: 100%;
+      margin-top: 10rem;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -434,6 +462,7 @@ form .comment-form {
 
 .content-box {
   width: 100%;
+  margin-top: -1rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -468,18 +497,13 @@ form .comment-form {
   width: 100%;
   margin-bottom: 5rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap; }
   @media (min-width: 1200px) {
     .tweets-user-list {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap; } }
+      width: 100%; } }
 
 .user-content {
   border-top: 1px solid #fefefe;
@@ -492,8 +516,10 @@ form .comment-form {
     .user-content {
       width: 100%; } }
   .user-content .user-profile {
+    width: 100%;
     margin-top: 5rem;
-    background-color: black; }
+    background-color: black;
+    position: relative; }
     @media (min-width: 1200px) {
       .user-content .user-profile {
         width: 50%; } }
@@ -510,6 +536,24 @@ form .comment-form {
         height: 5rem;
         border: 2px solid black;
         border-radius: 50%; }
+      .user-content .user-profile-img i {
+        font-size: 1.2rem;
+        color: #00acee;
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: .5rem;
+        border-radius: 50%;
+        position: absolute;
+        top: 35%;
+        left: 16%; }
+        @media (min-width: 576px) {
+          .user-content .user-profile-img i {
+            left: 9%; } }
+        @media (min-width: 768px) {
+          .user-content .user-profile-img i {
+            left: 9%; } }
+        @media (min-width: 992px) {
+          .user-content .user-profile-img i {
+            left: 7%; } }
     .user-content .user-profile-info {
       padding: 1rem; }
       .user-content .user-profile-info p {
@@ -541,7 +585,21 @@ form .comment-form {
   margin-top: 2rem; }
 
 .tweet-show {
-  margin-top: 7rem; }
+  margin-top: 7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; }
+
+.comment-list {
+  margin-bottom: 4rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; }
 
 .search {
   width: 100%;
@@ -631,10 +689,12 @@ form .comment-form {
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
+      margin-top: 7rem;
       width: 100%; } }
   @media (min-width: 992px) {
     .tweets-container {
       width: 100%;
+      margin-top: 10rem;
       display: flex;
       flex-direction: column;
       justify-content: center;

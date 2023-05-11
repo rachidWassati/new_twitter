@@ -5,7 +5,8 @@ const { createNewTweet,
         findTweetAndUpdate, 
         likeTweet,
         findAndShareTweet,
-        getCurrentUserTweetsWithFollowing
+        getCurrentUserTweetsWithFollowing,
+        findTweetsFromUsername
      } = require("../database/queries/tweet.queries");
 
 const multer = require('multer');
@@ -85,8 +86,9 @@ exports.displayTweet = async (req, res, next) => {
     try {
         const tweetId = req.params.tweetId;
         const tweet = await findTweetById(tweetId);
+        const tweets = await findTweetsFromUsername(req.user._id);
         if (tweet.author._id.toString() === req.user._id.toString()) {
-            res.render('tweet/tweet-edit', { tweet, isAuthenticated: req.isAuthenticated, currentUser: req.user })
+            res.render('tweet/tweet-edit', { tweets, tweet, isAuthenticated: req.isAuthenticated, currentUser: req.user })
         } else {
             res.redirect('/')
         }

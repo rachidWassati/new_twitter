@@ -28,7 +28,10 @@
                             span= moment(tweet.createdAt).fromNow()
                     if isAuthenticated && tweet.author._id.toString() === currentUser._id.toString()
                         .tweet-card-data-author-actions 
-                            i.fa-solid.fa-ellipsis-vertical
+                            a(href=`/tweet/edit/${tweet._id}`)
+                                i.fa-solid.fa-pen-to-square
+                            a(href=`/tweet/delete/${tweet._id}`)
+                                i.fa-solid.fa-trash
             .tweet-card-data-body 
                 p= tweet.content
             if tweet.image
@@ -40,21 +43,11 @@
                         span= tweet.comments.length
                 i.fa-heart(class = tweet.nbLikes > 0 ? "fa-solid" : "fa-regular" data-id= tweet._id) 
                     span= tweet.nbLikes
-                if !tweet.retweeted.status
+                if (tweet.author._id.toString() !== currentUser._id.toString()) 
                     a(href=`/tweet/share/${tweet._id}`) 
                         i.fa-solid.fa-retweet(data-id= tweet._id) 
                             span= tweet.nbShares
                 else 
                     i.fa-solid.fa-retweet(data-id= tweet._id) 
                         span= tweet.nbShares
-                
-        .tweet-options(data-id= tweet._id)
-            i.fa-solid.fa-pen-to-square
-                a(href=`/tweet/edit/${tweet._id}`) 
-                    span Edit 
-            i.fa-solid.fa-trash
-                a(href=`/tweet/delete/${tweet._id}`)
-                    span Delete
-            i.fa-solid.fa-ban
-                span Cancel
         

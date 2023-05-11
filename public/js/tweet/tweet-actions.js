@@ -4,7 +4,7 @@ const allCancelBtns = document.querySelectorAll('.fa-solid.fa-ban');
 
 allOptionBtns.forEach(optionBtn => {
     optionBtn.addEventListener('click', function () {
-        const id = optionBtn.parentNode.parentNode.parentNode.parentNode.dataset.id;
+        const id = optionBtn.parentNode.parentNode.parentNode.parentNode.parentNode.dataset.id;
         allOptionMenu.forEach((optionMenu) => {
             if(optionMenu.dataset.id === id) {
                 optionMenu.style.bottom = '0';

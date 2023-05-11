@@ -1,5 +1,5 @@
 const { createNewComment } = require("../database/queries/comment.queries");
-const { findTweetById } = require("../database/queries/tweet.queries");
+const { findTweetById, findTweetsFromUsername } = require("../database/queries/tweet.queries");
 
 exports.newComment = async (req, res, next) => {
     const body = req.body;
@@ -7,7 +7,6 @@ exports.newComment = async (req, res, next) => {
 
     try {
         const tweet = await findTweetById(tweetId);
-        const tweets = await findTweetsFromUsername(req.user._id);
         const newComment = await createNewComment({...body, author: req.user})
         tweet.comments.push(newComment._id);
         tweet.save();
